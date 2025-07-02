@@ -13,14 +13,19 @@ namespace TodoList
         // Initiates class, and ensures TodoList.json exists. Then converts JSON to C# TodoItem objects
         public Todo()
         {
-            if (!File.Exists(filePath))
-            {
-                File.WriteAllText(filePath, "[]");
-            }
+            if (!File.Exists(filePath)) { File.WriteAllText(filePath, "[]"); }
             json = File.ReadAllText(filePath);
             todoList = JsonSerializer.Deserialize<List<TodoItem>>(json) ?? new List<TodoItem>();
         }
-
+        public void printList()
+        {
+            Console.WriteLine("");
+            foreach (TodoItem i in todoList)
+            {
+                Console.WriteLine($"Title: {i.Title}\nDescription: {i.Description}\nDueDate: {i.DueDate}");
+            }
+            Console.WriteLine("");
+        }
     }
     public class TodoItem
     {
