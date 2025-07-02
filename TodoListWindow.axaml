@@ -8,5 +8,4 @@
         <TextBlock Text="Hello from Branch Window!" />
         <Button Content="Close" Click="OnCloseClick"/>
     </StackPanel>
-    
 </Window>

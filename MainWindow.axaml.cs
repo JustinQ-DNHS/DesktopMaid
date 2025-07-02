@@ -20,8 +20,6 @@ namespace DesktopMaid
             // Handle right-click on the window
             this.PointerPressed += OnWindowRightClick;
             todoList.printList();
-            todoList.addItem("New item", "desc", "4/2/23");
-            todoList.printList();
             todoList.save();
             this.OpenBranchWindow();
         }
@@ -40,7 +38,9 @@ namespace DesktopMaid
         private void OpenBranchWindow()
         {
             var branch = new BranchWindow();
+            var testing = new TestingPage();
             branch.Show(); // or branch.ShowDialog(this) for modal
+            testing.Show();
         }
     }
 }
