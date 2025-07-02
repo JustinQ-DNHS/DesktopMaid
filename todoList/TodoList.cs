@@ -29,7 +29,6 @@ namespace TodoList
         public void addItem(string title, string description, string dueDate)
         {
             todoList.Add(new TodoItem(title, description, dueDate));
-            this.save();
         }
         public void save()
         {

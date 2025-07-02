@@ -15,6 +15,9 @@ namespace DesktopMaid
             // Handle right-click on the window
             this.PointerPressed += OnWindowRightClick;
             todoList.printList();
+            todoList.addItem("New item", "desc", "4/2/23");
+            todoList.printList();
+            todoList.save();
         }
         
         private void OnWindowRightClick(object? sender, PointerPressedEventArgs e)
