@@ -18,8 +18,9 @@ namespace DesktopMaid
             todoList.addItem("New item", "desc", "4/2/23");
             todoList.printList();
             todoList.save();
+            this.OpenBranchWindow();
         }
-        
+
         private void OnWindowRightClick(object? sender, PointerPressedEventArgs e)
         {
             // Check if it's a right-click
@@ -27,9 +28,14 @@ namespace DesktopMaid
             {
                 // For now, just show a message
                 System.Console.WriteLine("Right-clicked the pet!");
-                
+
                 // Later, you'll open your settings window here
             }
+        }
+        private void OpenBranchWindow()
+        {
+            var branch = new BranchWindow();
+            branch.Show(); // or branch.ShowDialog(this) for modal
         }
     }
 }
