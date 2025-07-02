@@ -1,6 +1,7 @@
 using System;
 using Avalonia.Controls;
 using Avalonia.Input;
+using Avalonia.Media;
 using TodoList;
 
 namespace DesktopMaid
@@ -10,6 +11,10 @@ namespace DesktopMaid
         public MainWindow()
         {
             InitializeComponent();
+            // ChatGPT
+            TransparencyLevelHint = new[] { WindowTransparencyLevel.Transparent };
+            Background = Brushes.Transparent;
+            // End ChatGPT
             // Init TodoList
             Todo todoList = new Todo();
             // Handle right-click on the window
@@ -28,7 +33,7 @@ namespace DesktopMaid
             {
                 // For now, just show a message
                 System.Console.WriteLine("Right-clicked the pet!");
-
+                this.Close();
                 // Later, you'll open your settings window here
             }
         }
