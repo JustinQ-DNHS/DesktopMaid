@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DesktopMaid")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6999af76649ae5d1593177583d6c3f21a8bdb833")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+39ea30607e6f096375aefb63ceeb644322f43c2d")]
 [assembly: System.Reflection.AssemblyProductAttribute("DesktopMaid")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DesktopMaid")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
