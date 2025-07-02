@@ -1,1 +1,12 @@
-[{"Title":"Title!","Description":"This is a test","DueDate":"4/12/12"},{"Title":"New item","Description":"desc","DueDate":"4/2/23"}]
+[
+    {
+        "Title": "Title!",
+        "Description": "This is a test",
+        "DueDate": "4/12/12"
+    },
+    {
+        "Title": "New item",
+        "Description": "desc",
+        "DueDate": "4/2/23"
+    }
+]
