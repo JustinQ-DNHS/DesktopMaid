@@ -18,7 +18,7 @@ namespace TodoList
                 File.WriteAllText(filePath, "[]");
             }
             json = File.ReadAllText(filePath);
-            todoList = JsonSerializer.Deserialize<List<TodoItem>>(json);
+            todoList = JsonSerializer.Deserialize<List<TodoItem>>(json) ?? new List<TodoItem>();
         }
 
     }
