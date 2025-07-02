@@ -13,7 +13,7 @@
     
     <!-- This is where your GIF will go -->
     <gif:GifImage Name="PetImage" 
-           Source="avares://DesktopMaid/idle.gif"
+           Source="avares://DesktopMaid/assets/idle.gif"
            Stretch="Fill" />
     
 </Window>
