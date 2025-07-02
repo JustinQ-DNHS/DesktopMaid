@@ -19,6 +19,7 @@ namespace DesktopMaid
             Todo todoList = new Todo();
             // Handle right-click on the window
             this.PointerPressed += OnWindowRightClick;
+            this.PointerPressed += OnPointerPressed;
             todoList.printList();
             todoList.save();
             this.OpenBranchWindow();
@@ -33,6 +34,14 @@ namespace DesktopMaid
                 System.Console.WriteLine("Right-clicked the pet!");
                 this.Close();
                 // Later, you'll open your settings window here
+            }
+        }
+        // Inside your MainWindow class
+        private void OnPointerPressed(object? sender, PointerPressedEventArgs e)
+        {
+            if (e.GetCurrentPoint(this).Properties.IsLeftButtonPressed)
+            {
+                BeginMoveDrag(e);
             }
         }
         private void OpenBranchWindow()
