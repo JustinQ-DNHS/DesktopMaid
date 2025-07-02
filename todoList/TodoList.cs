@@ -20,7 +20,7 @@ namespace TodoList
         public void printList()
         {
             Console.WriteLine("");
-            foreach (TodoItem i in todoList)
+            foreach (var i in todoList)
             {
                 Console.WriteLine($"Title: {i.Title}\nDescription: {i.Description}\nDueDate: {i.DueDate}");
             }

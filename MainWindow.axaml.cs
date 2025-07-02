@@ -1,3 +1,4 @@
+using System;
 using Avalonia.Controls;
 using Avalonia.Input;
 using TodoList;
@@ -9,8 +10,12 @@ namespace DesktopMaid
         public MainWindow()
         {
             InitializeComponent();
+            // Init TodoList
+            Todo todoList = new Todo();
             // Handle right-click on the window
             this.PointerPressed += OnWindowRightClick;
+            Console.WriteLine("Testing");
+            todoList.printList();
         }
         
         private void OnWindowRightClick(object? sender, PointerPressedEventArgs e)
