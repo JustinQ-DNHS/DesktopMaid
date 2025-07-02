@@ -14,7 +14,6 @@ namespace DesktopMaid
             Todo todoList = new Todo();
             // Handle right-click on the window
             this.PointerPressed += OnWindowRightClick;
-            Console.WriteLine("Testing");
             todoList.printList();
         }
         

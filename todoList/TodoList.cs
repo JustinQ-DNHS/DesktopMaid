@@ -7,7 +7,8 @@ namespace TodoList
 {
     public class Todo
     {
-        private string filePath = "TodoList.json";
+        // FILEPATH, IF CHANGING FILE LOCATION CHANGE THIS.
+        private string filePath = "todoList/TodoList.json";
         private string json;
         private List<TodoItem> todoList;
         // Initiates class, and ensures TodoList.json exists. Then converts JSON to C# TodoItem objects
@@ -19,12 +20,19 @@ namespace TodoList
         }
         public void printList()
         {
-            Console.WriteLine("");
+            Console.WriteLine($"Todo list has {todoList.Count} items.");
             foreach (var i in todoList)
             {
                 Console.WriteLine($"Title: {i.Title}\nDescription: {i.Description}\nDueDate: {i.DueDate}");
             }
-            Console.WriteLine("");
+        }
+        public void addItem(string title, string description, string dueDate)
+        {
+            todoList.Add(new TodoItem(title, description, dueDate));
+        }
+        public void save()
+        {
+            
         }
     }
     public class TodoItem
