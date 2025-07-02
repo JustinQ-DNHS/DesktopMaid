@@ -1,4 +1,6 @@
 using System;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
 using Avalonia.Controls;
 using Avalonia.Input;
 using Avalonia.Media;
@@ -6,8 +8,32 @@ using TodoList;
 
 namespace DesktopMaid
 {
-    public partial class MainWindow : Window
+    public partial class MainWindow : Window, INotifyPropertyChanged
     {
+        private string _filePath = "avares://DesktopMaid/assets/idle.gif";
+
+        public string FilePath
+        {
+            get => _filePath;
+            set
+            {
+                if (_filePath != value)
+                {
+                    _filePath = value;
+                    OnPropertyChanged(); // notify binding system
+                }
+            }
+        }
+        public new event PropertyChangedEventHandler? PropertyChanged;
+
+        private void OnPropertyChanged([CallerMemberName] string? propertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+        public void ChangeImage()
+        {
+            FilePath = "avares://DesktopMaid/assets/lowlow.gif";
+        }
         public MainWindow()
         {
             InitializeComponent();
@@ -20,11 +46,20 @@ namespace DesktopMaid
             // Handle right-click on the window
             this.PointerPressed += OnWindowRightClick;
             this.PointerPressed += OnPointerPressed;
+            this.PointerReleased += OnPointerReleased;
             todoList.printList();
             todoList.save();
             this.OpenBranchWindow();
+            DataContext = this;
         }
-
+        private void OnPointerReleased(object? sender, PointerReleasedEventArgs e)
+        {
+            var point = e.GetCurrentPoint(this);
+            if (point.Properties.PointerUpdateKind == PointerUpdateKind.LeftButtonReleased)
+            {
+                FilePath = "avares://DesktopMaid/assets/idle.gif";
+            }
+        }
         private void OnWindowRightClick(object? sender, PointerPressedEventArgs e)
         {
             // Check if it's a right-click
@@ -42,6 +77,7 @@ namespace DesktopMaid
             if (e.GetCurrentPoint(this).Properties.IsLeftButtonPressed)
             {
                 BeginMoveDrag(e);
+                this.ChangeImage();
             }
         }
         private void OpenBranchWindow()

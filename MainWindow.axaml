@@ -1,6 +1,9 @@
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:gif="clr-namespace:Avalonia.Labs.Gif;assembly=Avalonia.Labs.Gif"
+        xmlns:controls="clr-namespace:Avalonia.Controls;assembly=Avalonia.Controls.DataGrid"
+        xmlns:local="clr-namespace:DesktopMaid"
+        x:DataType="local:MainWindow"
         x:Class="DesktopMaid.MainWindow"
         Title="Desktop Pet"
         Width="150"
@@ -13,7 +16,7 @@
     
     <!-- This is where your GIF will go -->
     <gif:GifImage Name="PetImage" 
-           Source="avares://DesktopMaid/assets/idle.gif"
+           Source="{ Binding FilePath }"
            Stretch="Fill" />
     
 </Window>
