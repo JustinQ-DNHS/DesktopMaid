@@ -27,6 +27,10 @@ public partial class MainWindow : Window, INotifyPropertyChanged
                 vm.ChangeGif();
             }
         }
+        if (e.GetCurrentPoint(this).Properties.IsRightButtonPressed)
+        {
+            this.Close();
+        }
     }
     private void Window_PointerRelease(object? sender, PointerReleasedEventArgs e)
     {
