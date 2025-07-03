@@ -2,20 +2,16 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:gif="clr-namespace:Avalonia.Labs.Gif;assembly=Avalonia.Labs.Gif"
         xmlns:controls="clr-namespace:Avalonia.Controls;assembly=Avalonia.Controls.DataGrid"
-        xmlns:local="clr-namespace:DesktopMaid"
-        x:DataType="local:MainWindow"
-        x:Class="DesktopMaid.MainWindow"
-        Title="Desktop Pet"
-        Width="150"
-        Height="150"
-        WindowStartupLocation="CenterScreen"
+        xmlns:local="clr-namespace:DesktopMaid.ViewModels"
+        x:DataType="local:MainWindowViewModel"
+        x:Class="DesktopMaid.Views.MainWindow"
+        PointerPressed="Window_OnClick"
+        Width="150" Height="150" Background="Transparent" Topmost="True"
         SystemDecorations="None"
-        Background="Transparent"
-        Topmost="True"
         CanResize="False">
     
     <!-- This is where your GIF will go -->
     <gif:GifImage Name="PetImage" 
-           Source="{ Binding FilePath }"
+           Source="{ Binding GifPath }"
            Stretch="Fill" />
 </Window>
