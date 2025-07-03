@@ -1,1 +1,1 @@
-WIP
+Idea stolen from someone else, I wanted to code it and improve on it further to make it similar to an assistant or secretary. Finding credit, assets were stolen from the same person.
