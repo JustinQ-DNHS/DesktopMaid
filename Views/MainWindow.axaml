@@ -5,7 +5,7 @@
         xmlns:local="clr-namespace:DesktopMaid.ViewModels"
         x:DataType="local:MainWindowViewModel"
         x:Class="DesktopMaid.Views.MainWindow"
-        PointerPressed="Window_OnClick"
+        PointerPressed="Window_PointerPress" PointerReleased="Window_PointerRelease"
         Width="150" Height="150" Background="Transparent" Topmost="True"
         SystemDecorations="None"
         CanResize="False">

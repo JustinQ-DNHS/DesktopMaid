@@ -17,11 +17,25 @@ public partial class MainWindow : Window, INotifyPropertyChanged
         Background = Brushes.Transparent;
         DataContext = new MainWindowViewModel();
     }
-    private void Window_OnClick(object? sender, PointerPressedEventArgs e)
+    private void Window_PointerPress(object? sender, PointerPressedEventArgs e)
     {
-        if (DataContext is MainWindowViewModel vm)
+        if (e.GetCurrentPoint(this).Properties.IsLeftButtonPressed)
         {
-            vm.ChangeGif();
+            if (DataContext is MainWindowViewModel vm)
+            {
+                BeginMoveDrag(e);
+                vm.ChangeGif();
+            }
         }
     }
+    private void Window_PointerRelease(object? sender, PointerReleasedEventArgs e)
+    {
+        if (e.GetCurrentPoint(this).Properties.PointerUpdateKind == PointerUpdateKind.LeftButtonReleased)
+        {
+            if (DataContext is MainWindowViewModel vm)
+            {
+                vm.ChangeGif();
+            }
+        }
+    } 
 }

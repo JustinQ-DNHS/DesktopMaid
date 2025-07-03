@@ -2,6 +2,9 @@ using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
 
+using DesktopMaid.Views;
+using DesktopMaid.ViewModels;
+
 namespace DesktopMaid;
 
 public partial class App : Application
