@@ -8,7 +8,7 @@ namespace TodoList
     public class Todo
     {
         // FILEPATH, IF CHANGING FILE LOCATION CHANGE THIS.
-        private string filePath = "todoList/TodoList.json";
+        private string filePath = "Assets/TodoList.json";
         private string json;
         private List<TodoItem> todoList;
         // Initiates class, and ensures TodoList.json exists. Then converts JSON to C# TodoItem objects

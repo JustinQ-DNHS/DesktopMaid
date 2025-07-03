@@ -47,9 +47,6 @@ namespace DesktopMaid
             this.PointerPressed += OnWindowRightClick;
             this.PointerPressed += OnPointerPressed;
             this.PointerReleased += OnPointerReleased;
-            todoList.printList();
-            todoList.save();
-            this.OpenBranchWindow();
             DataContext = this;
         }
         private void OnPointerReleased(object? sender, PointerReleasedEventArgs e)

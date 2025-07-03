@@ -23,7 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <AvaloniaResource Include="assets/idle.gif" />
-    <AvaloniaResource Include="assets/lowlow.gif" />
+    <AvaloniaResource Include="Assets/idle.gif" />
+    <AvaloniaResource Include="Assets/lowlow.gif" />
   </ItemGroup>
 </Project>
