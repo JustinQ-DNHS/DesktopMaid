@@ -10,7 +10,7 @@ namespace DesktopMaid
 {
     public partial class MainWindow : Window, INotifyPropertyChanged
     {
-        private string _filePath = "avares://DesktopMaid/assets/idle.gif";
+        private string _filePath = "avares://DesktopMaid/Assets/idle.gif";
 
         public string FilePath
         {
@@ -32,7 +32,7 @@ namespace DesktopMaid
         }
         public void ChangeImage()
         {
-            FilePath = "avares://DesktopMaid/assets/lowlow.gif";
+            FilePath = "avares://DesktopMaid/Assets/lowlow.gif";
         }
         public MainWindow()
         {

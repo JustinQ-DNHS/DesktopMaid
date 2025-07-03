@@ -4,7 +4,7 @@
         xmlns:controls="clr-namespace:Avalonia.Controls;assembly=Avalonia.Controls.DataGrid"
         xmlns:local="clr-namespace:DesktopMaid"
         x:DataType="local:MainWindow"
-        x:Class="DesktopMaid.MainWindow"
+        x:Class="DesktopMaid.Views.MainWindow"
         Title="Desktop Pet"
         Width="150"
         Height="150"
