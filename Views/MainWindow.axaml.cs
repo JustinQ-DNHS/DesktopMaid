@@ -1,9 +1,11 @@
+using System;
 using System.ComponentModel;
 using Avalonia.Controls;
 using Avalonia.Input;
 using Avalonia.Media;
 
 using DesktopMaid.ViewModels;
+using Tmds.DBus.Protocol;
 
 namespace DesktopMaid.Views;
 
@@ -41,5 +43,17 @@ public partial class MainWindow : Window, INotifyPropertyChanged
                 vm.ChangeGif();
             }
         }
-    } 
+    }
+    Random rand = new Random();
+    private void Periodic()
+    {
+        if (DataContext is MainWindowViewModel vm)
+        {
+            // Determine random action
+            int Temp = rand.Next(0, 5);
+            if (Temp < 2) { vm.ChangeGif(); }
+            else if (Temp < 3) { vm.ChangeGif(); }
+            else { vm.ChangeGif(); }
+        }
+    }
 }
