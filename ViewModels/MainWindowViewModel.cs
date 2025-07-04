@@ -5,7 +5,7 @@ namespace DesktopMaid.ViewModels;
 
 public partial class MainWindowViewModel : ViewModelBase
 {
-    private string[] filePaths = { "avares://DesktopMaid/Assets/idle.gif" };
+    private string[] filePaths = { "idle.gif", "low.gif", "lowlow.gif", };
     private string _gifPath = "avares://DesktopMaid/Assets/idle.gif";
     public string GifPath
     {
