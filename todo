@@ -1,0 +1,12 @@
+# Maid Looks
+## Movement Handling
+[ ] Convert GIFs into a list of images to setup model and have smoother transitions
+[ ] Create a functioning periodic function
+[ ] Disable random movement when Maid is being dragged
+
+## ToDo Logic
+[ ] Open todo list window when interacted with
+[ ] Automatically check if a listed task is approaching due date and add reminders
+[ ] Quick add to todo list
+
+## Misc
