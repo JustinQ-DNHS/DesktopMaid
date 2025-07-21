@@ -1,3 +1,6 @@
+<!-- xmlns:gif="clr-namespace:Avalonia.Labs.Gif;assembly=Avalonia.Labs.Gif"                         -->
+<!-- Adds GIF element to interpret GIFImages, should be removed when converted to a Image format    -->
+
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:gif="clr-namespace:Avalonia.Labs.Gif;assembly=Avalonia.Labs.Gif"
@@ -10,7 +13,7 @@
         SystemDecorations="None"
         CanResize="False">
     
-    <!-- This is where your GIF will go -->
+    <!-- GIF ELEMENT, //TODO CHANGE TO BE A IMAGE AND CHANGE IMAGE RATHER THAN USE A GIF -->
     <gif:GifImage Name="PetImage" 
            Source="{ Binding GifPath }"
            Stretch="Fill" />
