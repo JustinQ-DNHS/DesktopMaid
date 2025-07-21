@@ -29,6 +29,8 @@ public partial class MainWindow : Window, INotifyPropertyChanged
             Interval = TimeSpan.FromMilliseconds(200)
         };
         // Starts timer and whenever smth occurs run Periodic function
+        // Whenever tick is triggered, run a lambda with two parameters that naturally come with the Tick
+        // command (sender, e), since we do not use it, we discard the data using _
         _timer.Tick += (_, _) => Periodic();
         // Start the timer
         _timer.Start();
